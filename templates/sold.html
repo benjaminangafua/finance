@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}
+    Log In
+{% endblock %}
+{% block main %}
+    {% if symbol%}
+        <p> A share of {{symbols.name}}.({{symbols.symbol}}) costs {{symbols.price|usd}}.</p>
+        {% else%}
+            <p>400</p>
+    {% endif%}
+{% endblock %}
