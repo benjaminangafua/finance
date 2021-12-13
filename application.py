@@ -1,6 +1,6 @@
 import os
 
-from cs50 import SQL
+
 from flask import Flask, flash, redirect, render_template, request, session, jsonify
 from flask_session import Session
 from tempfile import mkdtemp
@@ -36,7 +36,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///finance.db")
+db = SQL(os.getenv("DATABASE_URL"))
 # export API_KEY=pk_5dd3c497a8f349afb35628edd13adfc1
 # Make sure API key is set
 if not os.environ.get("API_KEY"):
