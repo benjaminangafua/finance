@@ -1,6 +1,6 @@
 import os
 
-
+from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session, jsonify
 from flask_session import Session
 from tempfile import mkdtemp
@@ -362,3 +362,6 @@ def errorhandler(e):
 # Listen for errors
 for code in default_exceptions:
     app.errorhandler(code)(errorhandler)
+
+
+# postgres://nrzkrpdladeyjy:38050aa3b82d5d6d884832c86899572741f3c6445f956fa501c1037f523f1e6a@ec2-3-230-219-251.compute-1.amazonaws.com:5432/d1ca24pj48gv0c
